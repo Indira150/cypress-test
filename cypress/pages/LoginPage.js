@@ -9,10 +9,6 @@ class LoginPage {
         cy.get('[data-qa=login-button]').click();
     }
 
-    logout() {
-        cy.get('[href="/logout"]').click();
-    }
-
     verificarInicioDeSesionExitoso() {
         cy.url().should('eq', Cypress.config('baseUrl'));
     }
