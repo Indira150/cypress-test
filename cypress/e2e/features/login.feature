@@ -8,3 +8,7 @@ Feature: Login page
     Scenario: Successful login
         When ingreso credenciales válidas
         Then debería iniciar sesión exitosamente
+        
+    Scenario: Unsuccessful login
+        When ingreso credenciales inválidas
+        Then debería ver un mensaje de error
