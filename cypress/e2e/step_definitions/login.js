@@ -13,6 +13,14 @@ When('ingreso credenciales válidas', () => {
     loginPage.login('LeonelaRodriguez015@hotmail.com', '123456');
 });
 
+When('ingreso credenciales inválidas', () => {
+    loginPage.login('indira@hotmail.com', '123');
+});
+
 Then('debería iniciar sesión exitosamente', () => {
     loginPage.verificarInicioDeSesionExitoso();
+});
+
+Then('debería ver un mensaje de error', () => {
+    loginPage.verificarErrorDeInicioDeSesion();
 });
